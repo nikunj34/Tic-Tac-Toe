@@ -1,0 +1,90 @@
+.grid-container {
+    display: inline-grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%;
+    /* background-color: #2196F3; */
+    width: 30vw;
+    height: 30vw;
+    /* align-content: center; */
+    /* justify-items: center; */
+    padding-left: 35vw;
+    padding-right: 35vw;
+}
+
+.grid-item {
+    background-color: rgba(0, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    /* padding: 20px; */
+    font-size: 8vw;
+    text-align: center;
+    vertical-align: middle;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.filled {
+    cursor: not-allowed;
+}
+
+.grid-item:hover {
+    background-color: rgba(0, 255, 255, 0.5);
+}
+
+.grid-item:nth-child(1),
+.grid-item:nth-child(2),
+.grid-item:nth-child(3) {
+    border-top: none;
+}
+
+.grid-item:nth-child(3n) {
+    border-right: none;
+}
+
+.grid-item:nth-child(3n+1) {
+    border-left: none;
+}
+
+.grid-item:nth-child(7),
+.grid-item:nth-child(8),
+.grid-item:nth-child(9) {
+    border-bottom: none;
+}
+
+.hidden {
+    display: none;
+}
+
+td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.winning-message {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .9);
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size: 5rem;
+    flex-direction: column;
+}
+
+.winning-message-button {
+    font-size: 2rem;
+    background-color: white;
+    border: 1px solid black;
+    padding: .25em .5em;
+    cursor: pointer;
+}
+
+.winning-message-button:hover {
+    background-color: black;
+    color: white;
+    border-color: white;
+}

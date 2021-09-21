@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+
+    <link rel="stylesheet" charset=utf-8 href="style.css">
+
+</head>
+
+<body>
+
+    <form style="margin-left: auto; margin-right: auto; padding-bottom: 2%; padding-top: 1%;">
+        <table id="inputTable" style="margin-left: auto; margin-right: auto;">
+            <tr>
+                <td>
+                    <label for="gameType">Choose the Game Type:</label>
+                </td>
+                <td>
+                    <select id="gameType" name="gameType" required>
+                        <option value="1">Single Player</option>
+                        <option value="2" selected="selected">Double Player</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label id="labelPlayerNumber" for="playerNumber" class="hidden">Player Number: </label>
+                </td>
+                <td>
+                    <select id="playerNumber" name="playerNumber" class="hidden" required>
+                        <option value="1" selected="selected">Player 1</option>
+                        <option value="2">Player 2</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><input id="playButton" type="button" value="Lets Play!"></td>
+            </tr>
+        </table>
+        <br />
+
+    </form>
+    <div id="board" class="grid-container hidden">
+        <div id="0" class="grid-item">X</div>
+        <div id="1" class="grid-item">O</div>
+        <div id="2" class="grid-item">X</div>
+        <div id="3" class="grid-item">O</div>
+        <div id="4" class="grid-item"></div>
+        <div id="5" class="grid-item"></div>
+        <div id="6" class="grid-item">7</div>
+        <div id="7" class="grid-item">8</div>
+        <div id="8" class="grid-item">9</div>
+    </div>
+    <div id="result" class="winning-message hidden">
+        <div id="winning-message"></div>
+        <button id="new-game" class="winning-message-button">New Game</button>
+    </div>
+
+    <script type="text/javascript" src="bean.js"></script>
+</body>
+
+</html>
